@@ -5,7 +5,11 @@ class StudentsController < ApplicationController
   end
   
   def new
-  end 
+  end
+  
+  def create
+    @student = Student.create(params)
+  end
 
   def show
     @student = Student.find(params[:id])
